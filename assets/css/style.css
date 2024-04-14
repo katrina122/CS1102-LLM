@@ -8,11 +8,12 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    /* background:
+        linear-gradient(#2b1055, #7597de); */
     background:
-        linear-gradient(#2b1055, #7597de);
+        linear-gradient(#000000, #330d26, #f33dfd90);
+    /* background: linear-gradient(to bottom, #f3c5bd 0%, #e86c57 50%, #ea2803 51%, #ff6600 75%, #c72200 100%); */
     min-height: 100vh;
-
-
 }
 
 header {
@@ -29,7 +30,6 @@ header {
     margin: 0 auto;
     padding: 0 50px;
     max-width: 1200px;
-    padding: 0 50px;
 }
 
 header a.logo {
@@ -50,6 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-size: 20px;
     color: #fff;
     text-decoration: none;
     padding: 6px 16px;
@@ -72,15 +73,18 @@ main {
 
 .intro h1,
 .intro h2 {
-    color: #003366;
+    color: rgb(164, 36, 119);
+    font-size: 30px;
 }
 
 .intro ul {
     padding-left: 20px;
+    font-size: 20px;
 }
 
 .typing {
     padding: 20px;
+    /* padding-top: 100px; */
     color: #ffffff;
     margin: 20px;
     display: flex;
@@ -90,4 +94,32 @@ main {
 .typing h1 {
     font-size: 50px;
     font-weight: 600;
+}
+
+.auto-fill {
+    color: #F23DFD;
+}
+
+canvas {
+    display: flex;
+    position: fixed;
+    z-index: -1;
+}
+
+img {
+    display: block;
+    max-width: 97%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+}
+
+.SectionHeader {
+    padding: 20px;
+    color: #ffffff;
+    margin: 20px;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
 }
