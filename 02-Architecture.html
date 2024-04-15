@@ -32,7 +32,10 @@
                 <section class="intro">
                     <h2>Basic Architecture of LLMs:</h2>
                     <p>Large language models are mainly built upon the architecture of Transformer, which is a kind of neural network that constructed by multiple layers, and also adopting similar pre-training objectives like language modeling as small language models. However, the model size, data size, and total computation of large language models are significantly extended. </p>
-                    <p>Three mainstream architectures (blue: attention between prefix tokens, green: attention between prefix and target tokens, yellow: attention between target tokens, grey: masked attention)</p>
+                    <p>Three mainstream architectures </p>
+                    <ol>blue: attention between prefix tokens</ol>
+                    <ol>green: attention between prefix and target tokens</ol>
+                    <ol>yellow: attention between target tokens, grey: masked attention</ol>
                     <img src="architectures" width="300px">
                     <p>Causal Decoder Architecture: This architecture includes a one-way attention mask to ensure that each input token can focus on the past tokens and itself only. The input and output tokens are processed in the same way by the decoder.</p>
                     <p>Prefix Decoder Architecture: This architecture modifies the mask mechanism of the causal decoder to allow two-way attention to the prefix token and only one-way attention to the generated token. In this way, just like encoder-decoder architecture, the prefix decoder can encode the prefix sequence bidirectionally and automatically regression to predict the output label one by one, where the same parameters are shared during encoding and decoding. Instead of pre-training from scratch, it seems better to continuously train the causal decoder and then convert it into a prefix decoder to speed up the convergence.</p>
