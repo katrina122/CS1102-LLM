@@ -31,29 +31,26 @@
             <main>
 
                 <section class="intro">
+                    <h2>Welcome to Our Discovery Section</h2>
+                    <p>
 
+                        In this part of our website, we present an interactive Virtual Laboratory designed to deepen
+                        your understanding of Large Language Models (LLMs). Users can explore how different
+                        configurations of LLM parameters—such as
+                        the number of layers and the size of the training data—impact model performance. This hands-on
+                        experience serves to illuminate the
+                        intricate architecture of LLMs and the trade-offs involved in their training processes,
+                        providing a clearer comprehension of these powerful tools.
+                    </p>
 
-                    <h2>"Mountain Encounter"</h2>
+                    <h2>Test Question 1:"Explain what is computer science"</h2>
+
 
                     <p>
-                        On a sunny and pleasant spring day, the young explorer Alicia packed her backpack and
-                        stepped into an unfamiliar
-                        mountain range. She enjoyed the beautiful scenery along the way, but suddenly, in a dense
-                        forest, she discovered an
-                        ancient stone slab inscribed with symbols she had never seen before. As she gazed at the
-                        slab, a gust of wind blew, and
-                        the stone suddenly emitted a strange glow. Alicia felt a force drawing her closer, and her
-                        hand involuntarily touched
-                        the slab. In that instant, she felt herself being swept into a vortex.
-
 
                     </p>
-                    <h2>Test Question:</h2>
-                    <p>
-                        If Alicia finds herself in a completely different world after touching the stone slab, what does
-                        this world look like? Please describe in detail the landscape and creatures of this new
-                        world.
-                    </p>
+
+                    <p></p>
 
                 </section>
 
@@ -63,16 +60,23 @@
 
 
                         <br>
-                        <br>
+
                         <p>Adjust the parameters to see how they affect the output of a large language model.</p>
+                        <br>
+                        <label for="layers" class="subtitle">Number of Layers:</label><br>
+                        <div class="slider-container">
+                            <div id="layersValue">50</div>
+                            <input type="range" id="layersSlider" min="0" max="100" value="50"
+                                oninput="updateSliderValue(this)">
+                        </div>
 
-                        <label for="layers">Number of Layers:</label>
-                        <input type="range" id="layers" name="layers" min="1" max="20" value="10">
-                        <span id="layers-value">10</span>
-
-                        <label for="dataSize">Training Data Size (GB):</label>
-                        <input type="range" id="dataSize" name="dataSize" min="1" max="100" value="50">
-                        <span id="dataSize-value">50</span>
+                        <br>
+                        <label for="dataSize" class="subtitle">Training Data Size (GB):</label><br>
+                        <div class="slider-container">
+                            <div id="dataSizeValue">50</div>
+                            <input type="range" id="dataSizeSlider" min="0" max="100" value="50"
+                                oninput="updateSliderValue(this)">
+                        </div>
 
                         <button onclick="generateText()">Generate Text</button>
                         <div id="outputText">Your generated text will appear here...</div>
@@ -80,6 +84,7 @@
 
                     </section>
                 </main>
+                <script src="assets\JS\Interact_Script.js"></script>
 
 
 

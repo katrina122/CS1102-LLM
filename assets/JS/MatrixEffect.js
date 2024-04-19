@@ -13,7 +13,7 @@ var columns = canvas.width / fontSize;
 
 
 var rainDrops = [];
-for (let x = 0; x < columns; x++) {
+for (var x = 0; x < columns; x++) {
     rainDrops[x] = Math.floor(Math.random() * (canvas.height / fontSize));
 }
 
@@ -24,7 +24,7 @@ var draw = () => {
     context.fillStyle = 'rgba(244,244,244,0.3)';
     context.font = fontSize + 'px "Arial", monospace';;
 
-    for (let i = 0; i < rainDrops.length; i++) {
+    for (var i = 0; i < rainDrops.length; i++) {
         var text = characters.charAt(Math.floor(Math.random() * characters.length));
         context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
 
